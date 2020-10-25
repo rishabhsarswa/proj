@@ -13,6 +13,9 @@
   gtag('config', 'UA-135386004-1');
 </script>
 <!-- /Google Analytics -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lab File : Intel 8085 Microprocessor</title>
 </head>
 
@@ -267,7 +270,7 @@ HLT		;Stop Program
 
 	------- end program -------
 
-<img src="exp2micro_out.png" alt="photo_part" width="500">
+<img src="exp2micro_out.png" alt="photo_part" width="100%">
 
 <hr><hr>
 ##################################################################################################
@@ -307,7 +310,7 @@ HLT		;Stop Program
 
 	------- end program -------
 
-<img src="exp3micro_out.png" alt="photo_part" width="500">
+<img src="exp3micro_out.png" alt="photo_part" width="100%">
 
 <hr><hr>
 ##################################################################################################
@@ -338,14 +341,14 @@ Program :
 Address	HEX Codes	Labels	Mnemonics	Comments
 
 F000	0E, 00			MVI C,00H	Clear C register
-F002	21, 00, 80		LXI H,1000H	Load initial address to get operand
+F002	21, 00, 10		LXI H,1000H	Load initial address to get operand
 F005	7E			MOV A,M		Load Acc with memory element
 F006	23			INX H		Point to next location
 F007	46			MOV B,M		Load B with second operand
 F008	90			ADD B		ADD A and B
 F009	D2, 0D, F0		JNC STORE	When CY = 0, go to STORE
 F00C	0C			INR C		Increase C by 1
-F00D	21, 50, 80	STORE	LXI H,1002H	Load the destination address
+F00D	21, 20, 10	STORE	LXI H,1002H	Load the destination address
 F010	77			MOV M,A		Store the result
 F011	23			INX H		Point to next location
 F012	71			MOV M,C		Store the borrow
@@ -371,7 +374,7 @@ HLT			;Terminate the program
 
 	------- end program -------
 
-<img src="exp4micro_out.png" alt="photo_part" width="500">
+<img src="exp4micro_out.png" alt="photo_part" width="100%">
 
 <hr><hr>
 ##################################################################################################
@@ -402,14 +405,14 @@ Program :
 Address	HEX Codes	Labels	Mnemonics	Comments
 
 F000	0E, 00			MVI C,00H	Clear C register
-F002	21, 00, 80		LXI H,1000H	Load initial address to get operand
+F002	21, 00, 10		LXI H,1000H	Load initial address to get operand
 F005	7E			MOV A,M		Load Acc with memory element
 F006	23			INX H		Point to next location
 F007	46			MOV B,M		Load B with second operand
 F008	90			SUB B		Subtract B from A
 F009	D2, 0D, F0		JNC STORE	When CY = 0, go to STORE
 F00C	0C			INR C		Increase C by 1
-F00D	21, 50, 80	STORE	LXI H,1002H	Load the destination address
+F00D	21, 20, 10	STORE	LXI H,1002H	Load the destination address
 F010	77			MOV M,A		Store the result
 F011	23			INX H		Point to next location
 F012	71			MOV M,C		Store the borrow
@@ -435,9 +438,8 @@ HLT			;Terminate the program
 
 	------- end program -------
 
-<img src="exp5micro_flow.png" alt="photo_part" width="200">
-<img src="exp5micro_out.png" alt="photo_part" width="500">
-
+<img src="exp5micro_flow.png" alt="photo_part" height="80%">
+<img src="exp5micro_out.png" alt="photo_part" width="100%">
 <hr><hr>
 ##################################################################################################
 ##################################################################################################
@@ -466,7 +468,7 @@ Program :
 
 Address	HEX Codes	Labels	Mnemonics	Comments
 
-F000	21, 00, 80		LXI H,1000H	Load first operand address	
+F000	21, 00, 10		LXI H,1000H	Load first operand address	
 F003	46			MOV B, M	Store first operand to B	
 F004	23			INX H		Increase HL pair	
 F005	AF			XRA A		Clear accumulator	
@@ -476,7 +478,7 @@ F008	D2, 0C, F0		JNC SKIP	When Carry flag is 0, skip next task
 F00B	0C			INR C		Increase C when carry is 1	
 F00C	05		SKIP	DCR B		Decrease B register	
 F00D	C2, 07, F0		JNZ LOOP	Jump to loop when Z flag is not 1	
-F010	21, 50, 80		LXI H,1002H	Load Destination address	
+F010	21, 20, 10		LXI H,1002H	Load Destination address	
 F013	71			MOV M, C	Store C register content into memory	
 F014	23			INX H		Increase HL Pair	
 F015	77			MOV M, A	Store Acc content to memory	
@@ -502,8 +504,75 @@ HLT		;Terminate the program
 
 	------- end program -------
 
-<img src="exp6micro_flow.jpg" alt="photo_part" width="200">
-<img src="exp6micro_out.png" alt="photo_part" width="500">
+<img src="exp6micro_flow.jpg" alt="photo_part" height="60%" >
+<img src="exp6micro_out.png" alt="photo_part" width="100%" >
+<hr><hr>
+##################################################################################################
+##################################################################################################
+					EXP : 7
+##################################################################################################
+##################################################################################################
+
+<hr><hr>
+
+
+Name 	: Rishabh Sarswa
+Rollno 	: 19UELE8030
+
+
+Experiment : 7
+
+
+Aim :	Divide the contents of memory locations 1000H and 1001H and 
+	place the quotient in memory location 1002H and remainder on 1003H.
+
+Software Use :	GNUSim8085
+
+
+Program :
+
+	------ Program Table ------
+	
+Location	Hex code	Labels + Mnemonics	Explanation	
+
+F000		0G, 00		MVI C , 00H		Imm. More data to C	
+F004		21, 00, 10	LXI H , 1000H		Load data in resister pair
+F005		7E		MOV A , M		More data from memory to A	
+F006		23		INX H			Increment HL pair 	
+F007		46		MOV B , M		Move data from memory to B	
+F008		0C 		Loop : INR C		Increment C	
+F009		90		SUB B			Sub. B data from A	
+F00A		D2, 08, F0	JNC Loop		Jump if no carry
+F00D		80		ADD B			Add data of B and accumulator	
+F00E		23		LX1 H , 1002H		Increment HL pointer by 1	
+F011		71		MOV M,C			Move data from C to memory	
+F012		23		INX H			Increment HL pair resister	
+F013		77		MOV M,A			Move data from Accumulator	
+F014		76		HLT			End Program	
+
+
+	-------- program in asm ------
+
+MVI C , 00H		;Imm. More data to C	
+LXI H , 1000H		;Load data in resister pair	
+MOV A,M			;More data from memory to A	
+INX H			;Increment HL pair 	
+MOV B,M			;Move data from memory to B	
+Loop: INR C		;Increment C	
+SUB B			;Sub. B data from A	
+JNC Loop		;Jump if no carry	
+ADD B			;Add data of B and accumulator	
+LXI H , 1002H		;Increment HL pointer by 1	
+MOV M,C			;Move data from C to memory	
+INX H			;Increment HL pair resister	
+MOV M,A			;Move data from Accumulator	
+HLT			;End Program	
+
+
+	------- end program -------
+
+<img src="exp7micro_flow.png" alt="photo_part" height="80%">
+<img src="exp7micro_out.png" alt="photo_part" width="100%">
 <hr><hr>
 ##################################################################################################
 ##################################################################################################
@@ -515,3 +584,12 @@ HLT		;Terminate the program
 </pre>
 
 </body>
+
+
+
+
+
+
+
+
+
