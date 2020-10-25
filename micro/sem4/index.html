@@ -41,6 +41,7 @@
 	<a href="#exp7">Experiment : 7H</a>
 	<a href="#exp8">Experiment : 8H</a>
 	<a href="#exp9">Experiment : 9H</a>
+	<a href="#exp10">Experiment : AH</a>
 	
 <hr><div id="exp1" ></div><hr>
 ##################################################################################################
@@ -661,7 +662,7 @@ Program :
 
 MVI A, 35H 		;Load a test value
 LXI SP,1008H		;Intialise the stack pointer(SP)	
-PUSH PSW		;Copy the content of accumulator	And flag on the stack	
+PUSH PSW		;Copy the content of accumulator and flag on the stack	
 POP B			;Retrieve register pair (BC) from stack	
 MOV A,C			;Move the content from register  C to A	
 CMA			;Complement the accumulator	
@@ -673,6 +674,52 @@ HLT			;Stop the execution
 	------- end program -------
 
 <img src="exp9micro_out.png" alt="photo_part" width="100%">
+<hr><div id="exp10" ><hr>
+##################################################################################################
+##################################################################################################
+<a href="#exp0">INDEX</a>			EXP : 10
+##################################################################################################
+##################################################################################################
+
+<hr><hr>
+
+
+Name 	: Rishabh Sarswa
+Rollno 	: 19UELE8030
+
+
+Experiment : 10
+
+
+Aim :	Write a program to count number of 1’s in the contents of memory location 
+	1000H and store the count in memory location in 1001H
+
+Software Use :	GNUSim8085
+
+
+Program :
+
+	-------- program in asm ------
+
+MVI B, 0H		;clear count
+MVI C, 8H		;set total bits , countdown
+LDA 1000H		;load data
+Stat: PUSH PSW		;save psw status
+DCR C			;decrement loop countdown
+MOV A, C		;move countdown to check zero
+JNZ Loop		;if countdown is not zero jump to loop
+MOV A,B			;copy anwser to accumulator
+STA 1001H		;save result in memory
+HLT			; halt program
+Loop: POP PSW		;read saved psw status
+RAR			;rotate psw
+JNC Loopin		;check carry condition
+INR B 			;aincrement answer count
+Loopin: JMP Stat	;jump to stat label
+
+	------- end program -------
+
+<img src="exp10micro_out.png" alt="photo_part" width="100%">
 
 <hr><hr>
 ##################################################################################################
