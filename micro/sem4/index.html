@@ -258,11 +258,11 @@ Program :
 	-------- program in asm ------
 	
 	
-LXI B,0703H	;Load 8bit value	
+LXI B,0703H	;Load 16bit value	
 LXI H,1000H	;Load operand address
-MOV M,B		;Set first 4bit
+MOV M,B		;Set first 8bit
 INX H		;Increment address
-MOV M,C		;Set last 4bit
+MOV M,C		;Set last 8bit
 HLT		;Stop Program
 
 	------- end program -------
