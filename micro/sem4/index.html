@@ -618,15 +618,15 @@ Program :
 
 		
 MVI C,00		;Load 00 into register C	
-LHLD 1000H		;Load HL register pair with 16 bit data from memory location 28E0H and 28E1H	
+LHLD 1000H		;Load HL register pair with 16 bit data from memory location 1000H and 1001H	
 XCHG			;Exchange the content of register pair DE and HL	
-LHLD 1002H		;Load HL register pair with 2nd 16 bit no. from memory location 28E1H and 28E2H	
+LHLD 1002H		;Load HL register pair with 2nd 16 bit no. from memory location 1002H and 1003H	
 DAD D			;Add register pair DE with HL	
-JNC RER			;Jump on no carry to memory address 200E 
+JNC RER			;Jump on no carry 
 INR C			;Increment the register C by 1	
-RER: SHLD 1004H		;Store HL register pair directly to memory location 28E0H and 28F2H 	
+RER: SHLD 1004H		;Store HL register pair directly to memory location 1004H and 1005H 	
 MOV A,C			;Move from register C to accumulator	
-STA 1006H		;Store acc. Direct into memory location 28F2H (carry)	
+STA 1006H		;Store acc. Direct into memory location 1006H (carry)	
 HLT			;End Program
 
 	------- end program -------
