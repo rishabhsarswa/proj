@@ -40,6 +40,7 @@
 	<a href="#exp6">Experiment : 6H</a>
 	<a href="#exp7">Experiment : 7H</a>
 	<a href="#exp8">Experiment : 8H</a>
+	<a href="#exp9">Experiment : 9H</a>
 	
 <hr><div id="exp1" ></div><hr>
 ##################################################################################################
@@ -632,6 +633,46 @@ HLT			;End Program
 	------- end program -------
 
 <img src="exp8micro_out.png" title="photo_part" alt="photo_part" width="100%">
+<hr><div id="exp9" ><hr>
+##################################################################################################
+##################################################################################################
+<a href="#exp0">INDEX</a>			EXP : 9
+##################################################################################################
+##################################################################################################
+
+<hr><hr>
+
+
+Name 	: Rishabh Sarswa
+Rollno 	: 19UELE8030
+
+
+Experiment : 9
+
+
+Aim :	Write a program to complement status flags on 8085 microProcessor
+
+Software Use :	GNUSim8085
+
+
+Program :
+
+	-------- program in asm ------
+
+MVI A, 35H 		;Load a test value
+LXI SP,1008H		;Intialise the stack pointer(SP)	
+PUSH PSW		;Copy the content of accumulator	And flag on the stack	
+POP B			;Retrieve register pair (BC) from stack	
+MOV A,C			;Move the content from register  C to A	
+CMA			;Complement the accumulator	
+MOV C,A			;Store accumulator to C register	
+PUSH B			;Copy the content of BC register pair to stack	
+POP PSW			;Retrieve the content of accumulator and flag from stack	
+HLT			;Stop the execution
+
+	------- end program -------
+
+<img src="exp9micro_out.png" alt="photo_part" width="100%">
 
 <hr><hr>
 ##################################################################################################
