@@ -25,25 +25,37 @@
 		text-decoration: none;
 	}
 	</style>
-<pre><div id="exp0" >
+	<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        w=window.open();
+        w.document.write(printContents);
+        w.print();
+        close();
+    }
+    </script>
+<div id="exp0" ><pre>
 <hr><hr>		Name 	: Rishabh Sarswa
 		Roll no	: 19UELE8030
 		Year	: 2nd
 		SEM	: 4th
 		Session	: 2019-20
 <a href="#exp0">INDEX</a>
-	<a href="#exp1">Experiment : 1H</a>
-	<a href="#exp2">Experiment : 2H</a>
-	<a href="#exp3">Experiment : 3H</a>
-	<a href="#exp4">Experiment : 4H</a>
-	<a href="#exp5">Experiment : 5H</a>
-	<a href="#exp6">Experiment : 6H</a>
-	<a href="#exp7">Experiment : 7H</a>
-	<a href="#exp8">Experiment : 8H</a>
-	<a href="#exp9">Experiment : 9H</a>
-	<a href="#exp10">Experiment : AH</a>
+	<a href="#exp1">Experiment : 1H</a>		<a href="#" onClick="printDiv('exp1')" />| Print / PDF |</a>
+	<a href="#exp2">Experiment : 2H</a>		<a href="#" onClick="printDiv('exp2')" />| Print / PDF |</a>
+	<a href="#exp3">Experiment : 3H</a>		<a href="#" onClick="printDiv('exp3')" />| Print / PDF |</a>
+	<a href="#exp4">Experiment : 4H</a>		<a href="#" onClick="printDiv('exp4')" />| Print / PDF |</a>
+	<a href="#exp5">Experiment : 5H</a>		<a href="#" onClick="printDiv('exp5')" />| Print / PDF |</a>
+	<a href="#exp6">Experiment : 6H</a>		<a href="#" onClick="printDiv('exp6')" />| Print / PDF |</a>
+	<a href="#exp7">Experiment : 7H</a>		<a href="#" onClick="printDiv('exp7')" />| Print / PDF |</a>
+	<a href="#exp8">Experiment : 8H</a>		<a href="#" onClick="printDiv('exp8')" />| Print / PDF |</a>
+	<a href="#exp9">Experiment : 9H</a>		<a href="#" onClick="printDiv('exp9')" />| Print / PDF |</a>
+	<a href="#exp10">Experiment : AH</a>		<a href="#" onClick="printDiv('exp10')" />| Print / PDF |</a>
 	
-<hr><div id="exp1" ></div><hr>
+	<input type="button" onclick="printDiv('exp1')" value="Print All (Mixed)"/>
+
+<div id="exp1" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 1
@@ -251,8 +263,9 @@ Stack, I/O and Machine Control Group
 	------- end of file -------
 
 
-
-<hr><div id="exp2" ><hr>
+</pre></div>
+<div id="exp2" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 2
@@ -287,8 +300,9 @@ HLT		;Stop Program
 	------- end program -------
 
 <img src="exp2micro_out.png" title="photo_part" alt="photo_part" width="100%">
-
-<hr><div id="exp3" ><hr>
+</pre></div>
+<div id="exp3" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 3
@@ -327,8 +341,9 @@ HLT		;Stop Program
 	------- end program -------
 
 <img src="exp3micro_out.png" title="photo_part" alt="photo_part" width="100%">
-
-<hr><div id="exp4" ><hr>
+</pre></div>
+<div id="exp4" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 4
@@ -391,8 +406,9 @@ HLT			;Terminate the program
 	------- end program -------
 
 <img src="exp4micro_out.png" title="photo_part" alt="photo_part" width="100%">
-
-<hr><div id="exp5" ><hr>
+</pre></div>
+<div id="exp5" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 5
@@ -456,7 +472,9 @@ HLT			;Terminate the program
 
 <img src="exp5micro_flow.png" title="photo_part" alt="photo_part" height="80%">
 <img src="exp5micro_out.png" title="photo_part" alt="photo_part" width="100%">
-<hr><div id="exp6" ></div><hr>
+</pre></div>
+<div id="exp6" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 6
@@ -522,7 +540,9 @@ HLT		;Terminate the program
 
 <img src="exp6micro_flow.jpg" title="photo_part" alt="photo_part" height="60%" >
 <img src="exp6micro_out.png" title="photo_part" alt="photo_part" width="100%" >
-<hr><div id="exp7" ><hr>
+</pre></div>
+<div id="exp7" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 7
@@ -589,7 +609,9 @@ HLT			;End Program
 
 <img src="exp7micro_flow.png" title="photo_part" alt="photo_part" height="80%">
 <img src="exp7micro_out.png" title="photo_part" alt="photo_part" width="100%">
-<hr><div id="exp8" ><hr>
+</pre></div>
+<div id="exp8" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 8
@@ -634,7 +656,9 @@ HLT			;End Program
 	------- end program -------
 
 <img src="exp8micro_out.png" title="photo_part" alt="photo_part" width="100%">
-<hr><div id="exp9" ><hr>
+</pre></div>
+<div id="exp9" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 9
@@ -674,7 +698,9 @@ HLT			;Stop the execution
 	------- end program -------
 
 <img src="exp9micro_out.png" alt="photo_part" width="100%">
-<hr><div id="exp10" ><hr>
+</pre></div>
+<div id="exp10" ><pre>
+<hr><hr>
 ##################################################################################################
 ##################################################################################################
 <a href="#exp0">INDEX</a>			EXP : 10
@@ -721,6 +747,7 @@ Loopin: JMP Stat	;jump to stat label
 
 <img src="exp10micro_out.png" alt="photo_part" width="100%">
 
+</pre></div>
 <hr><hr>
 ##################################################################################################
 ##################################################################################################
@@ -730,7 +757,7 @@ Loopin: JMP Stat	;jump to stat label
 
 <hr><hr>
 </pre>
-
+</div>
 </body>
 
 
