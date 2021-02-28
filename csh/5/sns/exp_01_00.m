@@ -1,7 +1,8 @@
 
+
 % Experiment 1 : plot impulse , step , sinc function
 
-x = (-4*pi:pi/100:4*pi)' ;
+x = -4*pi:pi/100:4*pi ;
 
 
 vastep = x>0 ;
@@ -26,8 +27,16 @@ ylabel('Impulse')
 title('Plot of the Impuse Function')
 grid
 
+for(i=1:1:length(x))
+    
+    if(x(i) == 0)
+        y(i) = 1 ;
+    else
+        y(i) = sin(x(i))./x(i) ;
+    end
+    
+end
 
-y = sin(x)./x;
 figure ;
 
 
@@ -37,5 +46,3 @@ xlabel('Time')
 ylabel('sinc(t)')
 title('Plot of the Sinc Function')
 grid
-
-
