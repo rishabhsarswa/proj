@@ -1,0 +1,265 @@
+
+
+
+
+
+
+<html>
+
+
+<head>
+
+
+
+<link rel="icon" type="image/png" href="ref/rps_logo.png"/>
+	
+	<meta property="og:title" content="Awnto RPS - Robotic Pesticide Sprayer" />
+	
+	<!-- <meta property="og:url" content="https://abog.awnto.com/" /> -->
+	
+	<meta property="og:description" content="Awnto RPS - Robotic Pesticide Sprayer">
+	
+	<meta property="og:image" content="ref/rps_logo.png" />
+	
+	<meta property="og:type" content="article" />
+	
+	
+
+<meta name="description" content="Awnto RPS - Robotic Pesticide Sprayer">
+
+
+
+
+
+	<title>Awnto RPS - Robotic Pesticide Sprayer</title>
+<style>
+.cde
+{
+	color:#888888;
+}
+.cder
+{
+	color:red;
+}
+.cdeg
+{
+	color:green;
+}
+
+</style>
+
+  
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-135386004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135386004-1');
+</script>
+
+<!-- /Google Analytics -->
+
+
+
+</head>
+<body>
+<pre>
+<img src="ref/rps_logo.png" alt="awnto_rps" title="Awnto RPS" width=100 >
+########################
+
+----------- <div class="cder">Awnto RPS - Robotic Pesticide Sprayer</div>---------
+
+<div class="cder" > Author :- Rishabh Sarswa (Rishu) </div>
+
+<div id="k9index"></div>
+--------- Table of contents [ INDEX ] -------------
+
+
+Demo Video : <a href="ref/rps_demo_low.mp4" >Download</a> by Awnto
+
+<a href="#k9download_src" >download RPS Source Code</a>
+
+<a href="#k9download_pre" >download RPS prebuild for linux amd64</a>
+
+<a href="#k9client_man" >Client Manual</a>
+
+
+
+<img src="ref/rps_robot.jpg" alt="rps_robot" title="Awnto RPS Robot" width=300 >
+
+
+Last Docs Update : 2022/06/11
+
+----------------------------------------------
+
+
+
+<div id="k9download_src"></div>
+----------- <div class="cder">Awnto RPS - Download Source Code</div> <a href="#k9index" >Index</a> 
+--------- 
+
+	this contain source code for Server ( Robot Arduino ) and Client UNIX
+	
+
+you can download and compile Awnto RPS client , server 
+
+   Clients currently only for unix systems 
+   
+   	OS X (Apple Mac)
+   	Linux
+   		debian
+   		ubuntu
+   		redhat
+   		fedora
+   		alpine
+   		arch
+   		.... other linux distributions
+   	FreeBSD
+   	Solarious
+   	.... other UNIX Systems
+   		
+   		
+   Windows Client ( under Development )
+   		
+
+
+
+RPS source code <a href="assets/rps_dy.tar" >Download (270KB) tar</a>
+RPS source code <a href="assets/rps_dy.zip" >Download (290KB) zip</a>
+
+
+after download run command
+"tar -xvf rps_dy.tar"
+or unzip of you've downloaded as zip 
+
+then read readme.txt file
+
+-------------------------------------------
+
+
+
+<div id="k9download_pre"></div>
+----------- <div class="cder">Awnto RPS - Install Prebuild</div> <a href="#k9index" >Index</a>
+---------
+
+you can download and use Awnto RPS client on linux
+
+these binaries are only for linux ( amd64 == x86_64 )
+
+RPS amd64 <a href="assets/rps_amd64.tar" >Download (220KB)</a>
+
+after download run command
+"tar -xvf rps_amd64.tar"
+
+then read readme.txt file
+
+-------------------------------------------
+
+
+
+<div id="k9client_man"></div>
+----------- <div class="cder">Awnto RPS - Client Manual</div> <a href="#k9index" >Index</a>
+---------
+
+		
+			First turn on your Robot 
+			
+			run "./usr/bin/auto.sh"
+			or execute desktop entry
+			then enter root password
+			
+			when you run rps client you will see 3 differents windows
+			 1)	gives information about client
+			 2)	gives information about server(robot)
+			 3)	a black small window for input
+			 
+			 <img src="ref/rps_client_tel.jpg" alt="rps_client" title="RPS Client" width=400 >
+
+			----------------------------
+				Controls
+			----------------------------
+			  w	to move rps forward
+			  s	to move rps backward
+			  a	rotate front wheels to left
+			  d	rotate front wheels to right
+			  space	  apply breaks
+			  
+			  arrow(left)	same as 'a'
+			  arrow(right)	same as 'd'
+			  
+			  g	toggle grab_ws mode
+			  		in this mode you don't need to continue press w,s key
+			  f	toggle force mode
+			  		in this mode rps will move with force
+			  		(not recommanded arduino keep crashing in this mode)
+			  
+			  q	spin rps left
+			  e	spin rps right
+			  
+			  l	toggle pump
+			  
+			  
+			  y	move arm left
+			  u	move arm right
+			  
+			  pageup	same as 'y'
+			  pagedown	same as 'u'
+			  
+			  
+			  r	move nozzle upwards
+			  t	move nozzle downwards
+			  
+			  arrow(up)	same as 'r'
+			  arrow(down)	same as 't'
+			
+			----------------------------
+			 
+			
+------------------------------------------------------------------
+
+
+
+
+
+<img src="ref/rishabh.jpg" alt="rishabh_sarswa" title="Rishabh Sarswa" width=150 >
+Rishabh Sarswa (Rishu) 
+<a href="https://instagram.com/i.rishabhsarswa">Instagram(@i.rishabhsarswa)</a>
+
+
+<img src="ref/ravinder.jpg" alt="ravinder_kumar" title="Ravinder Kumar" width=150 >
+Ravinder Kumar
+
+<img src="ref/rakeshb.jpg" alt="rakesh_bishnoi" title="Rakesh Bishnoi" width=150 >
+Rakesh Bishnoi
+
+<img src="ref/rakeshg.jpg" alt="rakesh_gehlot" title="Rakesh Gehlot" width=150 >
+Rakesh Gehlot
+
+<img src="ref/surender.jpg" alt="surender_panwar" title="Surender Panwar" width=150 >
+Surender Panwar
+
+
+
+message us if you want to suggest some features for RPS
+
+
+----------------------------------
+
+WhatsApp(Rishu) : <a href="whatsapp://send?phone=919001531376&text=Hi" >Here</a>
+Mail : i.awnto@gmail.com
+
+Telegram : <a href="https://telegram.me/rishabhsarsawa" >rishabhsarswa</a>
+
+----------------------------------
+
+
+
+</pre>
+</body>
+</html>
+
+
